@@ -1,5 +1,6 @@
 package hu.nye.progtech.battleship.models;
 
+/** Implement player info for storing data in database. */
 public class PlayerInfo {
 
     private String playerName;
@@ -16,7 +17,7 @@ public class PlayerInfo {
         return playerName;
     }
 
-    public void setPlayerName(String newPlayerName) {
+    public void setPlayerName(String newPlayerName) throws NullPointerException {
         this.playerName = newPlayerName;
     }
 
@@ -32,7 +33,7 @@ public class PlayerInfo {
         this.playerPlayedGames = newPlayedGames;
     }
 
-    public void setPLayerWins(int newPlayerWins) {
+    public void setPlayerWins(int newPlayerWins) {
         this.playerWins = newPlayerWins;
     }
 

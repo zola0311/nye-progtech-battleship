@@ -7,9 +7,9 @@ public abstract class Player {
 
     private int shipsRemaining = 5;
     protected ShipSet ships;
-    protected Set<Character[]> guesses;
+    protected Set<Integer[]> guesses;
 
-    public abstract Character[] guess();
+    public abstract Integer[] guess();
 
     public abstract void deployShips();
 
@@ -21,7 +21,7 @@ public abstract class Player {
         return this.ships;
     }
 
-    public void sinkShip(char x, char y) {
+    public void sinkShip(int x, int y) {
         this.shipsRemaining -= 1;
         this.ships.remove(x, y);
     }

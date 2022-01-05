@@ -5,12 +5,13 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>hu.nye.progtech</groupId>
-    <artifactId>nye-progtech-battleship</artifactId>
+    <artifactId>battleship</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <properties>
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
     <dependencies>
@@ -51,28 +52,6 @@
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-jar-plugin</artifactId>
-                <version>2.4</version>
-                <configuration>
-                    <archive>
-                        <manifest>
-                            <mainClass>hu.nye.progtech.torpedo.Main</mainClass>
-                        </manifest>
-                    </archive>
-                </configuration>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-assembly-plugin</artifactId>
-                <version>3.3.0</version>
-            </plugin>
-            <plugin>
-                <groupId>org.jacoco</groupId>
-                <artifactId>jacoco-maven-plugin</artifactId>
-                <version>0.8.2</version>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-assembly-plugin</artifactId>
                 <version>3.3.0</version>
                 <executions>
@@ -85,7 +64,7 @@
                             <archive>
                                 <manifest>
                                     <mainClass>
-                                        hu.nye.progtech.torpedo.Main
+                                        hu.nye.progtech.battleship.Main
                                     </mainClass>
                                 </manifest>
                             </archive>
@@ -97,14 +76,20 @@
                 </executions>
             </plugin>
             <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>3.0.0-M5</version>
+            </plugin>
+            <plugin>
                 <groupId>org.jacoco</groupId>
                 <artifactId>jacoco-maven-plugin</artifactId>
                 <version>0.8.2</version>
                 <configuration>
                     <excludes>
-                        <exclude>hu/nye/progtech/battleship/model/*</exclude>
+                        <exclude>hu/nye/progtech/battleship/models/*</exclude>
                         <exclude>hu/nye/progtech/battleship/Main.*</exclude>
                         <exclude>hu/nye/progtech/battleship/ui/*</exclude>
+                        <exclude>hu/nye/progtech/battleship/configurations/*</exclude>
                     </excludes>
                 </configuration>
                 <executions>
@@ -133,7 +118,7 @@
                                         <limit>
                                             <counter>LINE</counter>
                                             <value>COVEREDRATIO</value>
-                                            <minimum>0.8</minimum>
+                                            <minimum>0.5</minimum>
                                         </limit>
                                     </limits>
                                 </rule>
@@ -166,6 +151,7 @@
                     </dependency>
                 </dependencies>
                 <executions>
+
                     <execution>
                         <id>validate</id>
                         <phase>validate</phase>
@@ -173,6 +159,7 @@
                             <goal>check</goal>
                         </goals>
                     </execution>
+
                 </executions>
             </plugin>
         </plugins>

@@ -11,13 +11,32 @@ public class ComputerPlayer extends Player {
         this.guesses = new HashSet<>();
     }
 
+    /** Add ships to Computer player. */
+    public void addShip(int x, int y) {
+        this.ships = new ShipSet();
+        var ship = new Ship(x, y);
+        if (!this.ships.contains(ship)) {
+            this.ships.add(ship);
+        }
+    }
+
+    /** Add ships to Computer player. */
+    public void addGuess(int x, int y) {
+        Integer[] guess = new Integer[2];
+        guess[0] = y;
+        guess[1] = x;
+        if (!this.guesses.contains(guess)) {
+            this.guesses.add(guess);
+        }
+    }
+
     @Override
-    public Character[] guess() {
+    public Integer[] guess() {
         System.out.println("A számítógép játékos felkészül a tüzelésre.");
-        Character[] guess = new Character[2];
+        Integer[] guess = new Integer[2];
         while (true) {
-            guess[0] = Generator.generateCharacter();
-            guess[1] = (char) Generator.generateInteger();
+            guess[0] = Generator.generateInteger();
+            guess[1] = Generator.generateInteger();
             if (!this.guesses.contains(guess)) {
                 this.guesses.add(guess);
                 break;
@@ -32,8 +51,8 @@ public class ComputerPlayer extends Player {
         int count = 1;
         this.ships = new ShipSet();
         while (this.ships.size() != 5) {
-            char x = Generator.generateCharacter();
-            char y = (char) Generator.generateInteger();
+            int x = Generator.generateInteger();
+            int y = Generator.generateInteger();
             var ship = new Ship(x, y);
             if (this.ships.contains(ship)) {
                 continue;

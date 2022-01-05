@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <checkstyle version="9.0.1">
+<file name="C:\progtech\nye-battleship\nye-progtech-battleship\src\main\java\hu\nye\progtech\battleship\configurations\ApplicationConfiguration.java">
+</file>
 <file name="C:\progtech\nye-battleship\nye-progtech-battleship\src\main\java\hu\nye\progtech\battleship\Main.java">
 </file>
 <file name="C:\progtech\nye-battleship\nye-progtech-battleship\src\main\java\hu\nye\progtech\battleship\models\ComputerPlayer.java">
@@ -8,12 +10,24 @@
 </file>
 <file name="C:\progtech\nye-battleship\nye-progtech-battleship\src\main\java\hu\nye\progtech\battleship\models\Player.java">
 </file>
+<file name="C:\progtech\nye-battleship\nye-progtech-battleship\src\main\java\hu\nye\progtech\battleship\models\PlayerInfo.java">
+</file>
 <file name="C:\progtech\nye-battleship\nye-progtech-battleship\src\main\java\hu\nye\progtech\battleship\models\Ship.java">
 </file>
 <file name="C:\progtech\nye-battleship\nye-progtech-battleship\src\main\java\hu\nye\progtech\battleship\models\ShipSet.java">
 </file>
+<file name="C:\progtech\nye-battleship\nye-progtech-battleship\src\main\java\hu\nye\progtech\battleship\persistences\impl\MySQLPlayerRepository.java">
+</file>
+<file name="C:\progtech\nye-battleship\nye-progtech-battleship\src\main\java\hu\nye\progtech\battleship\persistences\PlayerRepository.java">
+</file>
 <file name="C:\progtech\nye-battleship\nye-progtech-battleship\src\main\java\hu\nye\progtech\battleship\services\Battleship.java">
 </file>
 <file name="C:\progtech\nye-battleship\nye-progtech-battleship\src\main\java\hu\nye\progtech\battleship\services\Generator.java">
+</file>
+<file name="C:\progtech\nye-battleship\nye-progtech-battleship\src\main\java\hu\nye\progtech\battleship\services\PlayerCreator.java">
+</file>
+<file name="C:\progtech\nye-battleship\nye-progtech-battleship\src\main\java\hu\nye\progtech\battleship\services\UserInputReader.java">
+</file>
+<file name="C:\progtech\nye-battleship\nye-progtech-battleship\src\main\java\hu\nye\progtech\battleship\ui\PrintWrapper.java">
 </file>
 </checkstyle>

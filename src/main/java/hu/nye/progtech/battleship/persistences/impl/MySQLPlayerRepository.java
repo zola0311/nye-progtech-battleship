@@ -1,17 +1,20 @@
 package hu.nye.progtech.battleship.persistences.impl;
 
-import hu.nye.progtech.battleship.models.Player;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import hu.nye.progtech.battleship.models.PlayerInfo;
 import hu.nye.progtech.battleship.persistences.PlayerRepository;
 
-import java.sql.*;
-
+/** Implementation of PlayerRepository. */
 public class MySQLPlayerRepository implements PlayerRepository {
 
     private static final String INSERT_STATEMENT = "INSERT INTO players (playerName, playerWins, playerPlayedGames) VALUES (?, ?, ?);";
     private static final String SELECT_STATEMENT = "SELECT * FROM players Where playerName = ?;";
     private static final String UPDATE_STATEMENT = "UPDATE players SET playerWins = ?, playerPlayedGames = ? Where playerName = ?;";
-    private Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/progtechdatabase", "root", "");
+    private final Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/progtechdatabase", "root", "");
     private final PlayerInfo player;
 
     public MySQLPlayerRepository(PlayerInfo player) throws SQLException {
@@ -50,7 +53,7 @@ public class MySQLPlayerRepository implements PlayerRepository {
             preparedStatement.setString(1, player.getPlayerName());
             ResultSet resultSet = preparedStatement.executeQuery();
             if (resultSet.next()) {
-                player.setPLayerWins(resultSet.getInt("PlayerWins"));
+                player.setPlayerWins(resultSet.getInt("PlayerWins"));
                 player.setPlayerPlayedGames(resultSet.getInt("PlayerPlayedGames"));
             }
 

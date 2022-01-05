@@ -14,7 +14,7 @@ public class ShipSet implements Iterable<Ship> {
     }
 
     /** Get the information about the selected ship is at the point. */
-    public boolean shipIsPresentAt(char x, char y) {
+    public boolean shipIsPresentAt(int x, int y) {
         for (var ship : shipSet) {
             if (ship.isAtPosition(x, y)) {
                 return true;
@@ -36,7 +36,7 @@ public class ShipSet implements Iterable<Ship> {
     }
 
     /** Remove ship method. */
-    public boolean remove(char x, char y) {
+    public boolean remove(int x, int y) {
         Ship removedShip = null;
         for (var ship : this.shipSet) {
             if (ship.isAtPosition(x, y)) {

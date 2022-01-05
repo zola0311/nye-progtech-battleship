@@ -5,17 +5,17 @@ import java.util.Arrays;
 /** Implement ship object. */
 public class Ship {
 
-    private char[] position;
+    private int[] position;
 
-    public Ship(char x, char y) {
-        this.position = new char[] {x, y};
+    public Ship(int x, int y) {
+        this.position = new int[] {x, y};
     }
 
-    public char[] getPosition() {
+    public int[] getPosition() {
         return this.position;
     }
 
-    public boolean isAtPosition(char x, char y) {
+    public boolean isAtPosition(int x, int y) {
         return this.position[0] == x && this.position[1] == y;
     }
 

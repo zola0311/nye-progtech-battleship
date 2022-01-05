@@ -1,12 +1,19 @@
-#Sun Jan 02 15:58:51 CET 2022
+#Wed Jan 05 21:49:40 CET 2022
 configuration*?=65370073119CE4E88B8FE60025DA0FB7EB478004
-C\:\\progtech\\nye-battleship\\nye-progtech-battleship\\src\\main\\java\\hu\\nye\\progtech\\battleship\\models\\HumanPlayer.java=1641133011863
-C\:\\progtech\\nye-battleship\\nye-progtech-battleship\\src\\main\\java\\hu\\nye\\progtech\\battleship\\models\\ComputerPlayer.java=1641127154214
+C\:\\progtech\\nye-battleship\\nye-progtech-battleship\\src\\main\\java\\hu\\nye\\progtech\\battleship\\services\\UserInputReader.java=1641144044638
+C\:\\progtech\\nye-battleship\\nye-progtech-battleship\\src\\main\\java\\hu\\nye\\progtech\\battleship\\models\\Player.java=1641149126468
+C\:\\progtech\\nye-battleship\\nye-progtech-battleship\\src\\main\\java\\hu\\nye\\progtech\\battleship\\ui\\PrintWrapper.java=1641144094780
+C\:\\progtech\\nye-battleship\\nye-progtech-battleship\\src\\main\\java\\hu\\nye\\progtech\\battleship\\persistences\\PlayerRepository.java=1641144244449
+C\:\\progtech\\nye-battleship\\nye-progtech-battleship\\src\\main\\java\\hu\\nye\\progtech\\battleship\\Main.java=1641237034586
+C\:\\progtech\\nye-battleship\\nye-progtech-battleship\\src\\main\\java\\hu\\nye\\progtech\\battleship\\configurations\\ApplicationConfiguration.java=1641238222778
+C\:\\progtech\\nye-battleship\\nye-progtech-battleship\\src\\main\\java\\hu\\nye\\progtech\\battleship\\services\\Generator.java=1641240468665
+C\:\\progtech\\nye-battleship\\nye-progtech-battleship\\src\\main\\java\\hu\\nye\\progtech\\battleship\\models\\HumanPlayer.java=1641413860352
+C\:\\progtech\\nye-battleship\\nye-progtech-battleship\\src\\main\\java\\hu\\nye\\progtech\\battleship\\models\\ComputerPlayer.java=1641413841560
+C\:\\progtech\\nye-battleship\\nye-progtech-battleship\\src\\main\\java\\hu\\nye\\progtech\\battleship\\models\\PlayerInfo.java=1641321264817
 module-resource*?\:checkstyle-xpath-suppressions.xml=2A36DAF0BC974F9E33A08A6861290A314C99864E
-C\:\\progtech\\nye-battleship\\nye-progtech-battleship\\src\\main\\java\\hu\\nye\\progtech\\battleship\\models\\Player.java=1641133675033
-C\:\\progtech\\nye-battleship\\nye-progtech-battleship\\src\\main\\java\\hu\\nye\\progtech\\battleship\\models\\ShipSet.java=1640888473494
+C\:\\progtech\\nye-battleship\\nye-progtech-battleship\\src\\main\\java\\hu\\nye\\progtech\\battleship\\models\\ShipSet.java=1641149152909
 module-resource*?\:checkstyle-suppressions.xml=852275993DB653FAD58DC5A9C06D1537EEE041B
-C\:\\progtech\\nye-battleship\\nye-progtech-battleship\\src\\main\\java\\hu\\nye\\progtech\\battleship\\Main.java=1640800357967
-C\:\\progtech\\nye-battleship\\nye-progtech-battleship\\src\\main\\java\\hu\\nye\\progtech\\battleship\\models\\Ship.java=1640887800712
-C\:\\progtech\\nye-battleship\\nye-progtech-battleship\\src\\main\\java\\hu\\nye\\progtech\\battleship\\services\\Generator.java=1641126656074
-C\:\\progtech\\nye-battleship\\nye-progtech-battleship\\src\\main\\java\\hu\\nye\\progtech\\battleship\\services\\Battleship.java=1641135521632
+C\:\\progtech\\nye-battleship\\nye-progtech-battleship\\src\\main\\java\\hu\\nye\\progtech\\battleship\\persistences\\impl\\MySQLPlayerRepository.java=1641154122932
+C\:\\progtech\\nye-battleship\\nye-progtech-battleship\\src\\main\\java\\hu\\nye\\progtech\\battleship\\models\\Ship.java=1641148610181
+C\:\\progtech\\nye-battleship\\nye-progtech-battleship\\src\\main\\java\\hu\\nye\\progtech\\battleship\\services\\Battleship.java=1641415078868
+C\:\\progtech\\nye-battleship\\nye-progtech-battleship\\src\\main\\java\\hu\\nye\\progtech\\battleship\\services\\PlayerCreator.java=1641325204761

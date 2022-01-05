@@ -15,16 +15,35 @@ public class HumanPlayer extends Player {
         this.guesses = new HashSet<>();
     }
 
+    /** Add ships to Human player. */
+    public void addShip(int x, int y) {
+        this.ships = new ShipSet();
+        var ship = new Ship(x, y);
+        if (!this.ships.contains(ship)) {
+            this.ships.add(ship);
+        }
+    }
+
+    /** Add ships to Human player. */
+    public void addGuess(int x, int y) {
+        Integer[] guess = new Integer[2];
+        guess[0] = y;
+        guess[1] = x;
+        if (!this.guesses.contains(guess)) {
+            this.guesses.add(guess);
+        }
+    }
+
     @Override
-    public Character[] guess() {
-        Character[] guess = new Character[2];
+    public Integer[] guess() {
+        Integer[] guess = new Integer[2];
         System.out.println("Lövésre felkészülni!");
         while (true) {
             try {
-                System.out.print("Add meg a lövés X koordinátáját: ");
-                guess[0] = this.input.next().charAt(0);
                 System.out.print("Add meg a lövés Y koordinátáját: ");
-                guess[1] = this.input.next().charAt(0);
+                guess[0] = this.input.nextInt();
+                System.out.print("Add meg a lövés X koordinátáját: ");
+                guess[1] = this.input.nextInt();
                 if (!this.guesses.contains(guess)) {
                     this.guesses.add(guess);
                     break;
@@ -49,15 +68,11 @@ public class HumanPlayer extends Player {
         this.ships = new ShipSet();
         while (this.ships.size() != 5) {
             try {
-                System.out.print("Add meg a(z) " + count + ". hajód X koordinátáját: ");
-                char x = this.input.next().charAt(0);
                 System.out.print("Add meg a(z) " + count + ". hajód Y koordinátáját: ");
-                char y = this.input.next().charAt(0);
-                if (x < 'A' || x > 'J') {
-                    System.out.println("Helytelen koordináták, próbáld újra.");
-                    continue;
-                }
-                if (y < '0' || y > '9') {
+                int x = this.input.nextInt();
+                System.out.print("Add meg a(z) " + count + ". hajód X koordinátáját: ");
+                int y = this.input.nextInt();
+                if (x < 0 || x > 9 || y < 0 || y > 9) {
                     System.out.println("Helytelen koordináták, próbáld újra.");
                     continue;
                 }
